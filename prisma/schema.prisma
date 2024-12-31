@@ -1,0 +1,24 @@
+// Ajouter à la fin du fichier
+
+model Event {
+  id          String      @id @default(cuid())
+  title       String
+  description String?
+  startDate   DateTime
+  endDate     DateTime
+  location    String?
+  status      EventStatus @default(SCHEDULED)
+  userId      String      @map("user_id")
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@map("events")
+}
+
+enum EventStatus {
+  SCHEDULED
+  CANCELLED
+  COMPLETED
+
+  @@map("event_status")
+}

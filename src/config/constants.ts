@@ -1,0 +1,19 @@
+export const SYSTEM_CONSTANTS = {
+  RESOURCES: {
+    MAX_CPU_PERCENTAGE: 100,
+    MAX_MEMORY_MB: 1024,
+    DEFAULT_MODULE_CPU: 10,
+    DEFAULT_MODULE_MEMORY: 128
+  },
+  
+  MODULE_TYPES: {
+    AI: 'AI',
+    UTILITY: 'UTILITY'
+  },
+  
+  MODULE_STATUS: {
+    ACTIVE: 'ACTIVE',
+    INACTIVE: 'INACTIVE',
+    ERROR: 'ERROR'
+  }
+} as const;
